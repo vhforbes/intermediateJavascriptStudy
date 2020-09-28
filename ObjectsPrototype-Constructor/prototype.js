@@ -1,12 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-  <script>
 
 // ---------------- Prototype Property -------------------
 
@@ -70,10 +61,4 @@ let aBanana = new Fruit ("Banana", "Yellow")
 console.log(aBanana.showNameAndColor())
 
 // Como ele não encontra esse metodo no prototype de Fruit, ele vai buscar no seu Parent Plant
-
-
-
-  </script>
-</body>
-</html>
 
