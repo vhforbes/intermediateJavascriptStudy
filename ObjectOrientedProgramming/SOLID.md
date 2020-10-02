@@ -115,7 +115,11 @@ A rectangle has a set width and set height, this makes no sense for the inherite
 
 ## 4 - Interface Segregation
 
+When you expose modules, only the essential should be REQUIRED to run it, and nothing else.
 
+## 5 - Dependency Inversion Principle
+
+Handling over control from the function itself, to the caller of the function.
 
 
 
