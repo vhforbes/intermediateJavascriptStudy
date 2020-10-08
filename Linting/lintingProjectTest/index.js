@@ -1,0 +1,5 @@
+function test() {
+  // Code
+}
+
+test();

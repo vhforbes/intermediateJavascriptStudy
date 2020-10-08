@@ -1,7 +1,10 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
-import { MyComponentClass, MyComponentFunction } from './components/MyComponent'
+import React, { Component } from "react";
+import logo from "./logo.svg";
+import "./App.css";
+import {
+  MyComponentClass,
+  MyComponentFunction,
+} from "./components/MyComponent";
 
 // ------- Functional Component -----
 // function App() {
@@ -11,7 +14,7 @@ import { MyComponentClass, MyComponentFunction } from './components/MyComponent'
 //       console.log(text)
 //     }
 //   }
-  
+
 //   return (
 //     <div className="App">
 //       <MyComponentClass title='React Component' onButtonClicked={click('text')}/>
@@ -20,39 +23,42 @@ import { MyComponentClass, MyComponentFunction } from './components/MyComponent'
 //   );
 // }
 
-
 // ------ Class Component -------
-class App extends Component { // Using Class to make App component
+class App extends Component {
+  // Using Class to make App component
 
-  constructor (props) {
-    super(props)
+  constructor(props) {
+    super(props);
 
     this.state = {
       bananas: 0,
-    }
+    };
 
-    this.countUp = this.countUp.bind(this)
-    this.onClickBtn = this.onClickBtn.bind(this) // bind makes it stay in the same context
+    this.countUp = this.countUp.bind(this);
+    this.onClickBtn = this.onClickBtn.bind(this); // bind makes it stay in the same context
   }
 
   countUp() {
     this.setState({
       bananas: this.state.bananas + 1,
-    })
-    console.log(this.state.bananas)
+    });
+    console.log(this.state.bananas);
   }
 
   onClickBtn() {
-    console.log("this")
+    console.log("this");
   }
 
   render() {
     return (
       <div>
         <MyComponentClass title="Class" onButtonClicked={this.countUp} />
-        <MyComponentFunction title='React Function' onButtonClicked={this.onClickBtn}/>
+        <MyComponentFunction
+          title="React Function"
+          onButtonClicked={this.onClickBtn}
+        />
       </div>
-    )
+    );
   }
 }
 
